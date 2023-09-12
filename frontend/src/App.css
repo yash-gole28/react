@@ -17,6 +17,35 @@ body{
   pointer-events: none;
 }
 
+.button{
+  border: none;
+  padding: 10px;
+  background-color: #92ade4;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #410122;
+  font-size: 18px;
+  margin: 20px;
+  transition: transform 300ms;
+  transition: box-shadow 100ms;
+}
+.button-2{
+  border: none;
+  padding: 10px;
+  background-color: #e49292;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #410122;
+  font-size: 18px;
+  margin: 20px;
+  transition: transform 300ms;
+  transition: box-shadow 100ms;
+}
+.button:hover , .button-2:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 6px rgb(85, 85, 87);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

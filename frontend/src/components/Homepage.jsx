@@ -1,20 +1,27 @@
-// import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 
 function Homepage() {
+    const locate = useNavigate()
+   function navigate(){
+    locate("/Login")
+   }
 
-    // const router = useNavigate();
+   function toProfile(){
+    locate("/Profile")
+   }
 
-    // function routerToLogin() {
-    //     router("/")
-    // }
+   function counter(){
+    locate("/Counter")
+   }
 
     return (
         <div>
             <h1>Homepage for Awdiz</h1>
-            {/* <button onClick={routerToLogin}>Go to Login</button>
-            <button onClick={() => router('/register')}>Go to Register</button> */}
+            <button className="button" onClick={navigate}>LoginPage</button>
+            <button className="button" onClick={toProfile}>Profile</button>
+            <button className="button" onClick={counter}>Counter</button>
         </div>
     )
 }

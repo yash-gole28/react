@@ -1,38 +1,38 @@
-let array = ["mango", "apple", "banana",]
+// let array = ["mango", "apple", "banana",]
 
-array.push("watermelon")
+// array.push("watermelon")
 
-console.log(array)
+// console.log(array)
 
-array.unshift("grapes")
+// array.unshift("grapes")
 
-console.log(array)
-array.push("oranges")
-console.log(array)
+// console.log(array)
+// array.push("oranges")
+// console.log(array)
 
 
-console.log(array.slice(1, 4))
+// console.log(array.slice(1, 4))
 
-console.log(array)
+// console.log(array)
 
-let arr = [2, 5, 7, 3, 8]
+// let arr = [2, 5, 7, 3, 8]
 
-const newArr = arr.map((x) => x + 5);
+// const newArr = arr.map((x) => x + 5);
 
-console.log(newArr)
+// console.log(newArr)
 
-newArr.forEach((x) => console.log(x * x, "square of an element of an array ", x))
+// newArr.forEach((x) => console.log(x * x, "square of an element of an array ", x))
 
-let find = arr.find((no) => no > 5)
+// let find = arr.find((no) => no > 5)
 
-console.log(find, "--found no.")
+// console.log(find, "--found no.")
 
-let indexf = arr.findIndex((x) => x > 7)
+// let indexf = arr.findIndex((x) => x > 7)
 
-console.log(indexf, "position")
+// console.log(indexf, "position")
 
-console.log(arr.includes(7))
-console.log(arr.includes(9))
+// console.log(arr.includes(7))
+// console.log(arr.includes(9))
 
 let starCount = 5
 function stars(x) {
@@ -62,7 +62,7 @@ function st(x) {
     // }
 }
 
-console.log(st(starCount))
+// console.log(st(starCount))
 // function starsReduce(x){
 //     for(let i = ){}
 // }
@@ -73,7 +73,7 @@ let a = "*"
 
 a = a * 5
 
-console.log(a)
+// console.log(a)
 
 let str = "raceca"
 
@@ -90,13 +90,38 @@ function palindrome(array) {
     }
 }
 
-console.log(palindrome(arrayp))
+// console.log(palindrome(arrayp))
 
-setInterval(timing,1000)
-
-function timing(){
-let time = new Date()
+setInterval(function timing(){
+    let time = new Date()
 let onlyTime = time.toLocaleTimeString()
 
 console.log(onlyTime)
+}, 1000)
+
+// function timing(){
+// let time = new Date()
+// let onlyTime = time.toLocaleTimeString()
+
+// console.log(onlyTime)
+// }
+
+
+let arraySum = [2, 7, 4, 8, 3, 5]
+
+let target = 9
+
+function twoSum(array, target) {
+    let newarr = []
+    for (let i = 0; i < array.length; i++) {
+        for (j = i + 1; j < array.length; j++) {
+            if (array[i] + array[j] == target) {
+                newarr.push(i, j)
+            }
+        }
+    }
+    return newarr
+
 }
+
+console.log(twoSum(arraySum, target))
