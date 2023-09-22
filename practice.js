@@ -99,16 +99,13 @@ let onlyTime = time.toLocaleTimeString()
 console.log(onlyTime)
 }, 1000)
 
-// function timing(){
-// let time = new Date()
-// let onlyTime = time.toLocaleTimeString()
 
-// console.log(onlyTime)
-// }
 
 
 let arraySum = [2, 7, 4, 8, 3, 5]
 
+let index = arraySum.indexOf(8)
+console.log(index)
 let target = 9
 
 function twoSum(array, target) {

@@ -16,12 +16,31 @@ function Homepage() {
     locate("/Counter")
    }
 
+   function Effect1(){
+    locate("/Effect1")
+   }
+   function Effect2(){
+    locate("/Effect2")
+   }
+
+   function Effect3(){
+    locate("/Effect3")
+   }
+   
+   function Effect4(){
+    locate("/Effect4")
+   }
+
     return (
         <div>
             <h1>Homepage for Awdiz</h1>
             <button className="button" onClick={navigate}>LoginPage</button>
             <button className="button" onClick={toProfile}>Profile</button>
-            <button className="button" onClick={counter}>Counter</button>
+            <button className="button" onClick={counter}>Counter</button><br />
+            <button className="button" onClick={Effect1}>Effect1</button>
+            <button className="button" onClick={Effect2}>Effect2</button>
+            <button className="button" onClick={Effect3}>Effect3</button>
+            <button className="button" onClick={Effect4}>Effect4</button>
         </div>
     )
 }
