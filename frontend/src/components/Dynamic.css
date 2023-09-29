@@ -6,3 +6,12 @@
     padding: 12px;
     background-color: rgb(123, 242, 123);
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form label{
+    margin-top: 20px;
+}

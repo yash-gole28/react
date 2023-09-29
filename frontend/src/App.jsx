@@ -13,6 +13,7 @@ import Product from './components/Product';
 import Params from './components/Params';
 import Mapping from './components/Mapping';
 import DynamicStyle from './components/DynamicStyle';
+import Register from './components/Register';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path='/Product/:id'element={<Product/>}/>
         <Route path='/Mapping' element={<Mapping names = {['yash','tejas','shreyas']}/>}/>
         <Route exact path='DynamicStyle' element={<DynamicStyle/>}/>
+        <Route exact path='register' element={<Register/>}/>  
       </Routes>
       {/* <h1>hello there</h1> */}
     </div>
