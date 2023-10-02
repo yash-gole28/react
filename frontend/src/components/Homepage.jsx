@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-
+import toast from 'react-hot-toast'
 
 
 function Homepage() {
@@ -41,6 +41,9 @@ function Homepage() {
             <button className="button" onClick={Effect2}>Effect2</button>
             <button className="button" onClick={Effect3}>Effect3</button>
             <button className="button" onClick={Effect4}>Effect4</button>
+
+            <button className="button-2" onClick={()=>{toast.success("yeahhh")}}>Toast yeahh</button>
+            <button className="button-2" onClick={()=>{toast.error("Nahhh")}}>Toast Nahhh</button>
         </div>
     )
 }

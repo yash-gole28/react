@@ -14,11 +14,14 @@ import Params from './components/Params';
 import Mapping from './components/Mapping';
 import DynamicStyle from './components/DynamicStyle';
 import Register from './components/Register';
+import NotFound from './components/NotFound';
+import Products from './components/Products';
 
 function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path='*' element = {<NotFound/>}/>
         <Route path='/' element = {<Homepage/>}/>
         <Route path='/Login' element = {<Login/>}/>
         <Route path='/Profile' element = {<Profile />}/>
@@ -32,6 +35,7 @@ function App() {
         <Route path='/Mapping' element={<Mapping names = {['yash','tejas','shreyas']}/>}/>
         <Route exact path='DynamicStyle' element={<DynamicStyle/>}/>
         <Route exact path='register' element={<Register/>}/>  
+        <Route exact path= 'products' element={<Products/>}/>
       </Routes>
       {/* <h1>hello there</h1> */}
     </div>
