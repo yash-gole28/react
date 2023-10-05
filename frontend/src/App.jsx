@@ -17,6 +17,7 @@ import Register from './components/Register';
 import NotFound from './components/NotFound';
 import Products from './components/Products';
 import SingleProduct from './components/SingleProduct';
+import AddProduct from './components/AddProduct';
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
         <Route exact path='DynamicStyle' element={<DynamicStyle/>}/>
         <Route exact path='register' element={<Register/>}/>  
         <Route exact path= 'products' element={<Products/>}/>
-        <Route elact path='/singleProcuct/:id' element={<SingleProduct/>}/>
+        <Route exact path='/singleProcuct/:id' element={<SingleProduct/>}/>
+        <Route exact path='/addProduct' element={<AddProduct/>}/>
       </Routes>
       {/* <h1>hello there</h1> */}
     </div>
