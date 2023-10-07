@@ -90,3 +90,21 @@ form label{
     font-size: 18px;
     padding: 30px;
 }
+
+.col-change-btn:active{
+    background-color: aquamarine;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8px
+}
+
+.col-change-btn{
+    background-color: rgb(136, 127, 255);
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8px
+}

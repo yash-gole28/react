@@ -18,6 +18,8 @@ import NotFound from './components/NotFound';
 import Products from './components/Products';
 import SingleProduct from './components/SingleProduct';
 import AddProduct from './components/AddProduct';
+import Practice from './components/Practice';
+import UseMemo from './components/UseMemo';
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
         <Route exact path= 'products' element={<Products/>}/>
         <Route exact path='/singleProcuct/:id' element={<SingleProduct/>}/>
         <Route exact path='/addProduct' element={<AddProduct/>}/>
+        <Route exact path='/practice' element={<Practice/>}/>
+        <Route exact path='/use-memo'  element={<UseMemo/>}/>
       </Routes>
       {/* <h1>hello there</h1> */}
     </div>
