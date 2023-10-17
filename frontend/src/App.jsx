@@ -20,6 +20,10 @@ import SingleProduct from './components/SingleProduct';
 import AddProduct from './components/AddProduct';
 import Practice from './components/Practice';
 import UseMemo from './components/UseMemo';
+import UseCallback from './components/UseCallback';
+import UseReducer from './components/UseReducer';
+import CustomHook from './components/CustomHook';
+import CustomHookLS from './components/CustomHooksLS';
 
 function App() {
   return (
@@ -44,6 +48,10 @@ function App() {
         <Route exact path='/addProduct' element={<AddProduct/>}/>
         <Route exact path='/practice' element={<Practice/>}/>
         <Route exact path='/use-memo'  element={<UseMemo/>}/>
+        <Route exact path='/use-callback' element={<UseCallback/>}/>
+        <Route exact path='/use-reducer' element={<UseReducer/>}/>
+        <Route exact path='/customhook' element = {<CustomHook/>}/>
+        <Route exact path='/customhook-ls' element = {<CustomHookLS/>}/>
       </Routes>
       {/* <h1>hello there</h1> */}
     </div>

@@ -24,7 +24,7 @@ const UseMemo = () => {
 }
 
 const calculation = (counter)=>{
-    for(var i =0;i<1000000000;i++){
+    for(var i =0;i<10000;i++){
         counter += 1 
         console.log('calculating')
     }
