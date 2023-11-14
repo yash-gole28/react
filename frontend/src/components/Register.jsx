@@ -1,5 +1,8 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+// import axios from "axios"
+import toast from "react-hot-toast"
+import api from "./Helpers/Axios.config"
 const Register = ()=> {
     const [userData,setUserData]=useState({name : "",email : "", password : ""})
 
@@ -10,13 +13,27 @@ const Register = ()=> {
         setUserData({...userData,[event.target.name] : event.target.value})
     }
 
-    const sendDataToBackend = (event) =>{
+    const sendDataToBackend = async(event) =>{
         // alert("sent")
         event.preventDefault()
         if(userData.name && userData.email && userData.password){
             if(userData.password.length >= 5){
-                alert("registration successful")
-                router("/")
+                try{
+                // alert("registration successful")
+                
+                const response =await api.post("/auth/register",{userData})
+
+                if(response.data.success){
+                    toast.success("Registration successful")
+                    setUserData({name:"",email:"",password:""})
+                    router("/")
+                }
+                else(
+                    toast.error("Registration Failed")
+                )
+            }catch(error){ 
+                console.log(error)
+            }
             }
             else{
                 alert("password must be atleast 5 digits ")

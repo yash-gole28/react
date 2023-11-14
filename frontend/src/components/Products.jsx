@@ -1,8 +1,9 @@
 import React ,{ useEffect ,useState} from "react"
 import toast from 'react-hot-toast'
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
+// import axios from "axios"
 import './Dynamic.css'
+import api from "./Helpers/Axios.config";
 
 function Products(){
     const [products, setProducts] = useState([]);
@@ -12,9 +13,11 @@ function Products(){
         // toast.success("Page rendered on browser..")
         async function getProducts() {
             try {
-                const { data } = await axios.get('https://fakestoreapi.com/products');
+                const { data } = await api.get('/product/Allproducts');
                 // console.log(data, "data here")
-                setProducts(data)
+                if(data.success){
+                    setProducts(data.products)
+                }
             } catch (error) {
                 toast.error(error.message)
             }
@@ -23,8 +26,9 @@ function Products(){
     }, [])
     return (
         <div>
-            {products?.length ? <div style={{display:"flex",flexWrap:'wrap-reverse',justifyContent:'space-around',paddingTop:'1550px',paddingBottom:'50px'}} >{products.map((pro)=>(
-                <div onClick={()=> router(`/singleProcuct/${pro.id}`)} style={{width:'23%',height:'400px'}} className="Product-container">
+            {products?.length ? <div style={{display:"flex",flexWrap:'wrap',justifyContent:'space-around',paddingTop:'350px',paddingBottom:'50px'}} >{products.map((pro)=>(
+                // <div onClick={()=> router(`/singleProcuct/${pro.id}`)} style={{width:'23%',height:'400px'}} className="Product-container">
+                <div onClick={()=> router(`/singleProcuct/${pro._id}`)}  style={{width:'23%',height:'400px'}} className="Product-container">
                     
                     <div style={{width:"100%",height:'300px'}}><img style={{width:'100%',height:'100%',objectFit:'contain'}} src={pro.image} alt="" /></div>
                     <div className="product-name">{pro.title}</div>

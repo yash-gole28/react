@@ -11,6 +11,7 @@ const SingleProduct = () => {
         async function getSingleProductData() {
             try {
                 const { data } = await axios.get(`https://fakestoreapi.com/products/${id}`)
+                // const { data } = await axios.get(`http://localhost:8000/api/v1/product/single-product`)
                 if (data) {
                     SetProductData(data)
                 }
