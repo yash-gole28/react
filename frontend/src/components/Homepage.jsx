@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom"
 import toast from 'react-hot-toast'
 import { useContext } from "react"
-import { MyContext } from "./context/GlobalContext"
+import { AuthContext } from "./context/AuthContext"
+// import { MyContext } from "./context/GlobalContext"
 
 
 function Homepage() {
@@ -33,14 +34,17 @@ function Homepage() {
     locate("/Effect4")
    }
 
-   const {state , dispatch} = useContext(MyContext)
+//    const {state , dispatch} = useContext(MyContext)
+
+const {state} = useContext(AuthContext)
     return (
         <div>
-            <div>Counter : {state.counter}</div>
+            {/* <div>Counter : {state.counter}</div>
             <button onClick={()=> dispatch({type : "INCREMENT"})} className="button">+</button>
             <button onClick={()=> dispatch({type : "DECREMENT"})} className="button">-</button>
-            <button onClick={()=> dispatch({type : "RESET"})} className="button">Reset</button>
+            <button onClick={()=> dispatch({type : "RESET"})} className="button">Reset</button> */}
             <h1>Homepage for Awdiz</h1>
+            <h2>User : {state?.user?.name}</h2>
             <button className="button" onClick={navigate}>LoginPage</button>
             <button className="button" onClick={toProfile}>Profile</button>
             <button className="button" onClick={counter}>Counter</button><br />
