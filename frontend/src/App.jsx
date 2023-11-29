@@ -26,10 +26,12 @@ import CustomHook from './components/CustomHook';
 import CustomHookLS from './components/CustomHooksLS';
 import YourProducts from './components/YourProducts';
 import UpdateProduct from './components/UpdateProduct';
+import Navbar from './components/common/Navbar';
 
 function App() {
   return (
     <div className="App">
+      <Navbar/>
       <Routes>
         <Route path='*' element = {<NotFound/>}/>
         <Route path='/' element = {<Homepage/>}/>

@@ -57,7 +57,7 @@ const {state , Logout} = useContext(AuthContext)
             <button className="button" onClick={Effect3}>Effect3</button>
             <button className="button" onClick={Effect4}>Effect4</button>
 
-            <button className="button-2 logout" onClick={Logout}>Logout</button>
+            {/* <button className="button-2 logout" onClick={Logout}>Logout</button> */}
 
             <button className="button-2" onClick={()=>{toast.success("yeahhh")}}>Toast yeahh</button>
             <button className="button-2" onClick={()=>{toast.error("Nahhh")}}>Toast Nahhh</button>
