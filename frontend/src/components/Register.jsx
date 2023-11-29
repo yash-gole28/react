@@ -26,7 +26,7 @@ const Register = ()=> {
                 if(response.data.success){
                     toast.success("Registration successful")
                     setUserData({name:"",email:"",password:""})
-                    router("/")
+                    router("/login")
                 }
                 else(
                     toast.error("Registration Failed")
@@ -45,15 +45,15 @@ const Register = ()=> {
     }
     return(
         <div>
-            <form action="" onSubmit={sendDataToBackend}>
+            <form action="" onSubmit={sendDataToBackend} >
                 <label htmlFor="">Name:</label>
-                <input type="text" name="name" onChange={handleChange} id="" />
+                <input className="inputs" type="text" name="name" onChange={handleChange} id="" />
                 <label htmlFor="">Email :</label>
-                <input type="email" name="email" onChange={handleChange} id="" />
+                <input className="inputs" type="email" name="email" onChange={handleChange} id="" />
                 <label htmlFor="">Password :</label>
-                <input type="password" name="password" onChange={handleChange} id="" />
+                <input className="inputs" type="password" name="password" onChange={handleChange} id="" />
                 <br />
-                <input type="submit" value="Register" />
+                <input className="button" type="submit" value="Register" />
             </form>
         </div>
     )

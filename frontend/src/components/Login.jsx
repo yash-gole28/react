@@ -53,12 +53,12 @@ function Login(){
     return(
         <div>
             <form action="" onSubmit={sendDataToBackend}>
-                <label htmlFor="">Email :</label>
-                <input type="email" name="email" onChange={handleChange} id="" />
+                <label  htmlFor="">Email :</label>
+                <input className="inputs" type="email" name="email" onChange={handleChange} id="" />
                 <label htmlFor="">Password :</label>
-                <input type="password" name="password" onChange={handleChange} id="" />
+                <input className="inputs" type="password" name="password" onChange={handleChange} id="" />
                 <br />
-                <input type="submit" value="Register" />
+                <input className="button" type="submit" value="login" />
             </form>
         </div>
     )

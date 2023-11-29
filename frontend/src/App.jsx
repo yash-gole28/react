@@ -24,6 +24,8 @@ import UseCallback from './components/UseCallback';
 import UseReducer from './components/UseReducer';
 import CustomHook from './components/CustomHook';
 import CustomHookLS from './components/CustomHooksLS';
+import YourProducts from './components/YourProducts';
+import UpdateProduct from './components/UpdateProduct';
 
 function App() {
   return (
@@ -44,7 +46,7 @@ function App() {
         <Route exact path='DynamicStyle' element={<DynamicStyle/>}/>
         <Route exact path='register' element={<Register/>}/>  
         <Route exact path= 'products' element={<Products/>}/>
-        <Route exact path='/singleProcuct/:id' element={<SingleProduct/>}/>
+        <Route exact path='/singleProduct/:id' element={<SingleProduct/>}/>
         <Route exact path='/addProduct' element={<AddProduct/>}/>
         <Route exact path='/practice' element={<Practice/>}/>
         <Route exact path='/use-memo'  element={<UseMemo/>}/>
@@ -52,6 +54,8 @@ function App() {
         <Route exact path='/use-reducer' element={<UseReducer/>}/>
         <Route exact path='/customhook' element = {<CustomHook/>}/>
         <Route exact path='/customhook-ls' element = {<CustomHookLS/>}/>
+        <Route exact path='/your-products' element = {<YourProducts/>}/>
+        <Route exact path='/update-product/:id' element = {<UpdateProduct/>}/>
       </Routes>
       {/* <h1>hello there</h1> */}
     </div>

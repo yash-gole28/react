@@ -6,21 +6,26 @@ import { useParams } from "react-router-dom"
 const SingleProduct = () => {
     const { id } = useParams()
     const [productData, SetProductData] = useState({})
+    console.log(productData)
 
-    useEffect(() => {
-        async function getSingleProductData() {
-            try {
-                const { data } = await axios.get(`https://fakestoreapi.com/products/${id}`)
-                // const { data } = await axios.get(`http://localhost:8000/api/v1/product/single-product`)
-                if (data) {
-                    SetProductData(data)
-                }
-            }
-            catch (error) {
-                toast.error(error.message)
+    async function getSingleProductData() {
+        try {
+            const { data } = await axios.get(`/product/single-product${id}`)
+            // const { data } = await axios.get(`http://localhost:8000/api/v1/product/single-product`)
+            if (data.success) {
+                SetProductData(data)
             }
         }
+        catch (error) {
+            // toast.error(error.data.message)
+        }
+    }
 
+    
+
+
+    useEffect(() => {
+       
         if (id) {
             getSingleProductData()
         }
@@ -29,10 +34,10 @@ const SingleProduct = () => {
     console.log(productData)
     return (
         <div className="single-product-component">
-            {productData?.id ? <div className="single-product-container">
+            {productData?._id ? <div className="single-product-container">
                 <div className="single-product-image"><img src={productData.image} alt="" /></div>
                 <div className="single-product-details">
-                    <div className="s-p-title">{productData.title}</div>
+                    <div className="s-p-title">{productData.name}</div>
                     <div className="s-p-price">Price : {productData.price} $</div>
                     <div className="s-p-description">{productData.description}</div>
                 </div>

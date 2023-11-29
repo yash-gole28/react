@@ -25,13 +25,13 @@ function Products(){
         getProducts()
     }, [])
     return (
-        <div>
-            {products?.length ? <div style={{display:"flex",flexWrap:'wrap',justifyContent:'space-around',paddingTop:'350px',paddingBottom:'50px'}} >{products.map((pro)=>(
+        <div >
+            {products?.length ? <div style={{display:"flex",flexWrap:'wrap',justifyContent:'space-around',paddingTop:'760px',paddingBottom:'50px'}} >{products.map((pro)=>(
                 // <div onClick={()=> router(`/singleProcuct/${pro.id}`)} style={{width:'23%',height:'400px'}} className="Product-container">
-                <div onClick={()=> router(`/singleProcuct/${pro._id}`)}  style={{width:'23%',height:'400px'}} className="Product-container">
+                <div key={pro._id} onClick={()=> router(`/singleProduct/${pro._id}`)}  style={{width:'23%',height:'400px'}} className="Product-container">
                     
                     <div style={{width:"100%",height:'300px'}}><img style={{width:'100%',height:'100%',objectFit:'contain'}} src={pro.image} alt="" /></div>
-                    <div className="product-name">{pro.title}</div>
+                    <div className="product-name">{pro.name}</div>
                     <div className="product-price">{pro.price}$</div>
                     <div><input type="button" value="view" /></div>
                     {/* <div>{pro.description}</div> */}

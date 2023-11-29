@@ -33,10 +33,13 @@ function Homepage() {
    function Effect4(){
     locate("/Effect4")
    }
+   function regPage(){
+    locate("/register")
+   }
 
 //    const {state , dispatch} = useContext(MyContext)
 
-const {state} = useContext(AuthContext)
+const {state , Logout} = useContext(AuthContext)
     return (
         <div>
             {/* <div>Counter : {state.counter}</div>
@@ -45,6 +48,7 @@ const {state} = useContext(AuthContext)
             <button onClick={()=> dispatch({type : "RESET"})} className="button">Reset</button> */}
             <h1>Homepage for Awdiz</h1>
             <h2>User : {state?.user?.name}</h2>
+            <button className="button" onClick={regPage}>Register</button>
             <button className="button" onClick={navigate}>LoginPage</button>
             <button className="button" onClick={toProfile}>Profile</button>
             <button className="button" onClick={counter}>Counter</button><br />
@@ -52,6 +56,8 @@ const {state} = useContext(AuthContext)
             <button className="button" onClick={Effect2}>Effect2</button>
             <button className="button" onClick={Effect3}>Effect3</button>
             <button className="button" onClick={Effect4}>Effect4</button>
+
+            <button className="button-2 logout" onClick={Logout}>Logout</button>
 
             <button className="button-2" onClick={()=>{toast.success("yeahhh")}}>Toast yeahh</button>
             <button className="button-2" onClick={()=>{toast.error("Nahhh")}}>Toast Nahhh</button>
