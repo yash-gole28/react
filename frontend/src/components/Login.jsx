@@ -35,11 +35,13 @@ function Login(){
                     router("/")
                 }
                 else(
+                    // console.log("login failed")
                     toast.error("Login Failed")
                 )
                
             }catch(error){ 
                 console.log(error)
+                toast.error("Login Failed")
             }
             }
             else{

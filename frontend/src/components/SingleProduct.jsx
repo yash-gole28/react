@@ -57,10 +57,12 @@ const SingleProduct = () => {
                     <div className="s-p-title">{productData.name}</div>
                     <div className="s-p-price">Price : {productData.price} $</div>
                     <div className="s-p-description">{productData.description}</div>
-                    <button onClick={()=>{cart(productData._id)}}> Add to cart </button>
+                    <button style={{width:'50%',margin:"10px auto"}} className="button" onClick={()=>{cart(productData._id)}}> Add to cart </button>
                 </div>
             </div> :
-                <div>loading ... </div>
+               <div style={{ display: "flex", alignItems: "center",justifyContent:"center", fontSize: "25px" }}>Loading <div style={{ marginLeft: "20px" }} class="spinner-border text-danger" role="status">
+               <span class="visually-hidden">Loading...</span>
+           </div></div>
             }
         </div>
     )

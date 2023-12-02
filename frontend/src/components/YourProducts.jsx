@@ -54,19 +54,21 @@ const YourProducts = () => {
        <div >
        {yourProducts?.length ? <div style={{display:'flex'}}>
         {yourProducts.map((pro)=>(
-            <div style={{height:'400px' ,margin:"50px"}} key={pro._id}>
-                <div style={{height:"300px"}}>
-                    <img src={pro.image} alt="" />
+            <div style={{height:'400px' ,margin:"50px",boxShadow:"0px 0px 7px black",borderRadius:"15px"}} key={pro._id}>
+                <div style={{height:"250px"}}>
+                    <img style={{height:'240px',width:"300px",borderTopRightRadius:"15px",borderTopLeftRadius:"15px"}} src={pro.image} alt="" />
                 </div>
-                <div style={{color:'black'}}>{pro.name}</div>
-                <div style={{color:'black'}}> $ {pro.price}</div>
-                <button onClick={()=>router(`/update-product/${pro._id}`)}>Update</button>
-                <button onClick={()=>deleteProduct(pro._id)}>delete</button>
+                <div style={{color:'black'}}> <h4>{pro.name}</h4> </div>
+                <div style={{color:'black'}}> <h5>{pro.price} $</h5> </div>
+                <button className='button' onClick={()=>router(`/update-product/${pro._id}`)}>Update</button>
+                <button className='button-2' onClick={()=>deleteProduct(pro._id)}>delete</button>
 
             </div>
             
         ))}
-       </div> : <div> loading.... </div> }
+       </div> : <div style={{ display: "flex", alignItems: "center", fontSize: "25px" }}>Loading <div style={{ marginLeft: "20px" }} class="spinner-border text-danger" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div></div> }
        </div>
     </div>
   )
