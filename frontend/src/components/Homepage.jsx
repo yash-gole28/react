@@ -39,7 +39,7 @@ function Homepage() {
 
 //    const {state , dispatch} = useContext(MyContext)
 
-const {state , Logout} = useContext(AuthContext)
+const {state } = useContext(AuthContext)
     return (
         <div>
             {/* <div>Counter : {state.counter}</div>

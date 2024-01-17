@@ -25,6 +25,7 @@ import toast from "react-hot-toast";
 
   
     const [state , dispatch] = useReducer(reducer , initialState)
+    
 
     const Login =(data)=>{
         dispatch({type:"LOGIN",payload:data})
@@ -52,6 +53,7 @@ import toast from "react-hot-toast";
             }
              
          }
+         console.log(state)
  
          const token = JSON.parse(localStorage.getItem("my-token")) 
          if(token){

@@ -28,6 +28,7 @@ import YourProducts from './components/YourProducts';
 import UpdateProduct from './components/UpdateProduct';
 import Navbar from './components/common/Navbar';
 import Cart from './components/Cart';
+import Tailwind from './components/Tailwind';
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
         <Route exact path='/your-products' element = {<YourProducts/>}/>
         <Route exact path='/update-product/:id' element = {<UpdateProduct/>}/>
         <Route exact path='/cart' element = {<Cart/>}/>
+        <Route exact path='/tailwind' element = {<Tailwind/>}/>
       </Routes>
       {/* <h1>hello there</h1> */}
     </div>

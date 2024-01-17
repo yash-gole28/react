@@ -11,7 +11,7 @@ const reducer = (state , action) =>{
         case 'DECREMENT' :
             if(state.counter > 0){
                 return {...state , counter : state.counter - 1}
-            }
+            };
             
         case 'RESET' :
             return {...state , counter : 0}

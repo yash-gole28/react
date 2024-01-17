@@ -8,7 +8,7 @@ const Navbar = () => {
     const { state, Logout } = useContext(AuthContext)
 
     return (
-        <div style={{ display: "flex", justifyContent: 'space-around',width: "100vw", height: "40px",backgroundColor:"grey",color:'white', fontSize: "20px" ,position:'absolute',top:'0px',left:"0px"}}>
+        <div className='hover:animate-pulse' style={{ display: "flex", justifyContent: 'space-around',width: "100vw", height: "40px",backgroundColor:"grey",color:'white', fontSize: "20px" ,position:'absolute',top:'0px',left:"0px"}}>
             <div onClick={() => router('/')} style={{ width: '20%'}}>Home</div>
             <div style={{ width: '50%', display: "flex", justifyContent: 'space-around' }}>
                 <div onClick={() => router('/products')}>Products</div>

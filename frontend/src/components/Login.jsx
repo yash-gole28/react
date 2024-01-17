@@ -9,7 +9,7 @@ function Login(){
 
     const router = useNavigate()
 
-    const {Login , state} = useContext(AuthContext)
+    const {Login} = useContext(AuthContext)
     
     const handleChange = (event) => {
         
